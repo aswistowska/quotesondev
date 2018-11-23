@@ -20,8 +20,7 @@ function qod_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html( 'Primary Menu' ),
-		'secondary' => __('Secondary Navigation')
+		'primary' => esc_html( 'Primary Menu' )
 	) );
 
 	// Switch search form, comment form, and comments to output valid HTML5.
@@ -61,6 +60,16 @@ function qod_scripts() {
 
 	wp_enqueue_script( 'qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
+
+	if(function_exists('rest_url')) {
+		wp_enqueue_script('qod_api', get_template_directory_uri() . '/build/js/api.min.js', array(), false, true);
+		wp_localize_script('qod_api', 'api_vars',
+			array('root_url' => esc_url_raw(rest_url()),
+				'home_url' => esc_url_raw(home_url()),
+				'nonce' => wp_create_nonce('wp_rest'),
+				'success' => 'Thanks, your quote submission was received!',
+				'failure' => 'Your submission could not be processed.'));
+	}
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
 

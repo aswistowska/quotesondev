@@ -1,4 +1,4 @@
-git <?php
+<?php
 /**
  * Template part for displaying posts.
  *
@@ -16,3 +16,7 @@ git <?php
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
+
+<?php if (is_home() || is_single()): ?>
+    <button type="button" id="new-quote-button">Show Me Another!</button>
+<?php endif;?>

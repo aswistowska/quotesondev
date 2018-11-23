@@ -11,7 +11,7 @@
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
                 <div class="bottomMenu">
-					<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
                 </div>
 				<div class="site-info">
 					Brought to you by Agata Swistowska <a href="<?php echo esc_url( 'https://redacademy.com/' ); ?>">
