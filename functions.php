@@ -60,6 +60,8 @@ function qod_scripts() {
 
 	wp_enqueue_script( 'qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
+	wp_enqueue_style( 'font-awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 
 	if(function_exists('rest_url')) {
 		wp_enqueue_script('qod_api', get_template_directory_uri() . '/build/js/api.min.js', array(), false, true);

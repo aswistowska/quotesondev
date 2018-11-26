@@ -3,6 +3,7 @@
 $base__width: 1080px;
 $base__space-unit: 1.5rem;
 $base__dashed_border: 1px dashed #ffffff;
+$base__space-unit: 10px;
 
 // Colors
 
@@ -19,8 +20,8 @@ $color__background-ins: #fff9c0;
 $color__border-abbr: #666;
 
 $color__link: #00cc00;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link-visited: #00cc00;
+$color__link-hover: darken(#00cc00, 10%);
 
 // Typography
 $font__size: 16px;
