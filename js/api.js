@@ -1,21 +1,3 @@
-/* Ajax-based random post fetching.
-*
-* fetch a new quote ->
-*
-* api_vars.root_url + 'wp/v2/posts?{arguments}'
-*
-* get the first and only post array ?
-*
-* update the quote content and name of the quoted person
-*
-* display quote source if available
-*
-* update the url using history
-* */
-
-// make the back and forward nav work with the history API
-
-
 // ajax-based front-end post submissions -> submit form -> new function :P
 
 /*event on submit of the form -> 'wp/v2/posts'
@@ -65,5 +47,21 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(response => response.json())
             .then(jsonArray => jsonArray[0])
             .then(showQuote);
-    })
+    });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const submitQuoteButton = document.getElementById('submit-quote-button');
+
+    function submitDataFromForm() {
+
+    }
+
+    submitQuoteButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        alert('a kuku');
+    });
+});
+
+
+

@@ -343,6 +343,9 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+.quote-submission-wrapper .submit-success.message {
+  display: inline-block; }
+
 /* Buttons */
 button,
 input[type="button"],
@@ -370,8 +373,9 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
+  background-color: #222222;
+  color: #fff;
+  border: 2px solid #00cc00;
   border-radius: 3px; }
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -379,7 +383,7 @@ textarea {
   input[type="password"]:focus,
   input[type="search"]:focus,
   textarea:focus {
-    color: #111; }
+    color: #fff; }
 
 input[type="text"],
 input[type="email"],
@@ -708,4 +712,37 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* All Archives Page */
+.archive-lists, .wp-tag-cloud {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0; }
+  .archive-lists li, .wp-tag-cloud li {
+    font-size: 16px;
+    margin-right: 10px; }
+    .archive-lists li a, .wp-tag-cloud li a {
+      text-decoration: none; }
+
 /* Submit a Quote Page */
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin: 10px 0; }
+  .form label {
+    margin: 5px 0; }
+  .form .quote-author, .form .quote-source, .form .quote-source-url {
+    width: 65%; }
+    @media (min-width: 1080px) {
+      .form .quote-author, .form .quote-source, .form .quote-source-url {
+        width: 50%; } }
+  .form .quote-content {
+    width: 100%; }

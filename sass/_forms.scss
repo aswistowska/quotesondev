@@ -2,6 +2,10 @@
 # Forms
 --------------------------------------------------------------*/
 
+.quote-submission-wrapper .submit-success.message {
+  display: inline-block;
+}
+
 /* Buttons */
 button,
 input[type="button"],
@@ -21,11 +25,6 @@ input[type="submit"] {
 		border:2px solid darken($color__brand_green, 10%);
 		color: darken($color__brand_green, 10%);
 	}
-
-	&:active,
-	&:focus {
-
-	}
 }
 
 /* Fields */
@@ -36,12 +35,13 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
+	background-color: $color__background-body;
+    color: $color__text-main;
+    border: 2px solid $color__brand_green;
 	border-radius: 3px;
 
 	&:focus {
-		color: #111;
+		color: $color__text-main;
 	}
 }
 

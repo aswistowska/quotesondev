@@ -3,4 +3,44 @@
 --------------------------------------------------------------*/
 /* All Archives Page */
 
+.archive-lists, .wp-tag-cloud{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    font-size: $font__size;
+    margin-right: $base__space-unit;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+
 /* Submit a Quote Page */
+
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: $base__space-unit 0;
+
+  label {
+    margin: $base__space-unit/2 0;
+  }
+
+  .quote-author, .quote-source, .quote-source-url {
+    width: 65%;
+
+    @include desktop {
+      width: 50%;
+    }
+  }
+
+  .quote-content {
+    width: 100%;
+  }
+}
