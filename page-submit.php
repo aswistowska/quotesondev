@@ -7,7 +7,10 @@
  */
 get_header(); ?>
     <header>
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+<?php if( is_user_logged_in() && current_user_can( 'edit_posts' ) ): ?>
+
+	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+<?php endif; ?>
     </header>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -38,8 +41,6 @@ get_header(); ?>
                         <input id="submit-quote-button" type="submit" value="Submit Quote">
 
                     </form>
-                    <p class="submit-success-message"></p>
-
                 </div>
 
 			<?php else: ?>
@@ -49,7 +50,7 @@ get_header(); ?>
 					<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 				<?php endwhile; // End of the loop. ?>
-
+                <a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login">Click here to login.</a>
 			<?php endif; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
