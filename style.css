@@ -574,6 +574,9 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+body {
+  line-height: 1.5; }
+
 @media (min-width: 1080px) {
   .site-content {
     margin: 30px 175px 10px;
@@ -596,7 +599,7 @@ a {
 .container {
   margin: 0 auto;
   max-width: 1080px;
-  padding: 15px;
+  padding: 12px;
   width: 100%; }
 
 .logo img {
@@ -666,14 +669,8 @@ a {
   clear: both;
   margin: 0 0 10px; }
 
-/* Archive */
-.archive .hentry {
-  border-bottom: 1px dotted #fff; }
-
-.archive .page-title, .search .page-title {
-  border-bottom: 1px dotted #fff;
-  margin-top: 3rem;
-  padding-bottom: 1.5rem; }
+.blog .entry-content, .page .entry-title {
+  margin-top: 3rem; }
 
 /* Footer */
 .site-info {
@@ -682,7 +679,7 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 30px 0 20px; }
+  margin: 70px 0 50px; }
   .site-info p {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
@@ -697,7 +694,7 @@ a {
         -webkit-box-flex: 0;
             -ms-flex: 0 1 auto;
                 flex: 0 1 auto;
-        padding-left: 7px; } }
+        padding-left: 10px; } }
   @media (min-width: 1080px) {
     .site-info {
       -webkit-box-pack: end;
@@ -713,7 +710,7 @@ a {
     .site-info ul li {
       border-right: 1px solid white;
       line-height: 1;
-      padding: 0 7px; }
+      padding: 0 10px; }
       .site-info ul li:first-child {
         padding-left: 0; }
       .site-info ul li:last-child {
@@ -756,9 +753,25 @@ object {
   padding-left: 0; }
   .archive-lists li, .wp-tag-cloud li {
     font-size: 16px;
-    margin-right: 10px; }
+    margin-bottom: 10px;
+    margin-right: 20px; }
+    @media (min-width: 620px) {
+      .archive-lists li, .wp-tag-cloud li {
+        font-size: 20px; } }
     .archive-lists li a, .wp-tag-cloud li a {
       text-decoration: none; }
+
+@media (min-width: 620px) {
+  .tag-cloud-link {
+    font-size: 20px !important; } }
+
+.archive .hentry {
+  border-bottom: 1px dotted #fff; }
+
+.archive .page-title, .search .page-title {
+  border-bottom: 1px dotted #fff;
+  margin-top: 3rem;
+  padding-bottom: 1.5rem; }
 
 /* Submit a Quote Page */
 .form {

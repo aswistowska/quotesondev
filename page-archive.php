@@ -9,6 +9,11 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+            <header class="page-header">
+				<?php
+				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				?>
+            </header><!-- .page-header -->
             <section class="author">
                 <h2>Quote Authors</h2>
                 <ul class="archive-lists">

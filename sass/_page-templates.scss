@@ -12,13 +12,36 @@
 
   li {
     font-size: $font__size;
-    margin-right: $base__space-unit;
+    margin-bottom: $base__space-unit;
+    margin-right: $base__space-unit * 2;
+
+    @include tablet {
+      font-size: $font__size * 1.25;
+    }
 
     a {
       text-decoration: none;
     }
   }
 }
+
+.tag-cloud-link {
+  @include tablet {
+    font-size: $font__size * 1.25 !important;
+  }
+}
+
+
+.archive .hentry {
+  border-bottom: 1px dotted #fff;
+}
+
+.archive .page-title, .search .page-title {
+  border-bottom: 1px dotted #fff;
+  margin-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+
 
 
 /* Submit a Quote Page */
