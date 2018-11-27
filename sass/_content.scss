@@ -116,6 +116,18 @@
   margin: 0 0 $base__space-unit;
 }
 
+/* Archive */
+
+.archive .hentry {
+  border-bottom: 1px dotted #fff;
+}
+
+.archive .page-title, .search .page-title {
+  border-bottom: 1px dotted #fff;
+  margin-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+
 /* Footer */
 
 .site-info {

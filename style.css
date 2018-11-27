@@ -397,11 +397,34 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+/* New Quote Button */
 #new-quote-button {
   display: block; }
   @media (min-width: 1080px) {
     #new-quote-button {
       margin: 0 auto; } }
+
+/* Search Form */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+.search-form label {
+  float: left;
+  min-width: 200px; }
+
+.search-form input[type="search"] {
+  width: 240px; }
+
+.search-submit {
+  border: 0;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px; }
+  .search-submit:hover {
+    border: none;
+    color: #009900; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -642,6 +665,15 @@ a {
 .page-links {
   clear: both;
   margin: 0 0 10px; }
+
+/* Archive */
+.archive .hentry {
+  border-bottom: 1px dotted #fff; }
+
+.archive .page-title, .search .page-title {
+  border-bottom: 1px dotted #fff;
+  margin-top: 3rem;
+  padding-bottom: 1.5rem; }
 
 /* Footer */
 .site-info {

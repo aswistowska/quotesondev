@@ -58,6 +58,8 @@ textarea {
 	width: 100%;
 }
 
+/* New Quote Button */
+
 #new-quote-button {
   display: block;
 
@@ -65,3 +67,33 @@ textarea {
     margin: 0 auto;
   }
 }
+
+/* Search Form */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.search-form label {
+  float: left;
+  min-width: 200px;
+}
+
+.search-form input[type="search"] {
+  width: 240px;
+}
+
+.search-submit {
+  border: 0;
+  float: left;
+  padding-left: $base__space-unit;
+  padding-right: $base__space-unit;
+
+  &:hover {
+    border: none;
+    color: darken($color__brand_green, 10%);
+  }
+}
+
